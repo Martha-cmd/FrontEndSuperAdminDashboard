@@ -21,8 +21,8 @@ const SideBar = () => {
   ];
 
   const bottomNavItems = [
-    { path: "/", icon: FiSettings, label: "Settings" },
-    { path: "/register", icon: BiLogOut, label: "Sign Out" },
+    { path: "/settings", icon: FiSettings, label: "Settings" },
+    { path: "/sign-out", icon: BiLogOut, label: "Sign Out" },
   ];
 
   const toggleMobileMenu = () => {
@@ -73,13 +73,7 @@ const SideBar = () => {
 
             return (
               <li>
-                <Link
-                  className={`w-full text-white font-light flex gap-5 items-center text-[15px] px-4 py-2 rounded-full transition-all duration-200 hover:cursor-pointer ${
-                    active
-                      ? "bg-white text-black font-normal"
-                      : "hover:bg-gray-200 hover:text-black hover:font-normal"
-                  }`}
-                >
+                <Link className="w-full text-white font-light flex gap-5 items-center text-[15px] px-4 py-2 rounded-full transition-all duration-200 hover:cursor-pointer hover:bg-gray-200 hover:text-black hover:font-normal">
                   <Icon />
                   {item.label}
                 </Link>
