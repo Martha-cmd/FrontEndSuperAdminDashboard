@@ -53,12 +53,15 @@ const UserTable = ({ search }) => {
     if (!id) return;
 
     try {
-      const res = await fetch(`http://localhost:5001/api/customers/${id}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      const res = await fetch(
+        `http://backendsuperadmindashboard.onrender.com/api/customers/${id}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
 
       const data = await res.json();
 

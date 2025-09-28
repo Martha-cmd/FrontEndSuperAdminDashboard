@@ -21,14 +21,17 @@ const AddUser = ({ isOpen, onClose }) => {
     setIsLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5001/api/customers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "http://backendsuperadmindashboard.onrender.com/api/customers",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const data = await res.json();
 
