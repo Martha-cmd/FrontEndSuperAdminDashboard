@@ -22,7 +22,7 @@ const AddUser = ({ isOpen, onClose }) => {
 
     try {
       const res = await fetch(
-        "http://backendsuperadmindashboard.onrender.com/api/customers",
+        "https://backendsuperadmindashboard-0a1b.onrender.com/api/customers",
         {
           method: "POST",
           headers: {

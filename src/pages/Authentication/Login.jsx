@@ -21,7 +21,7 @@ const Login = () => {
 
     try {
       const res = await fetch(
-        "http://backendsuperadmindashboard.onrender.com/api/auth/login",
+        "https://backendsuperadmindashboard-0a1b.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {

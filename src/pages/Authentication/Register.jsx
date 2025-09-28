@@ -26,7 +26,7 @@ const Register = () => {
 
     try {
       const res = await fetch(
-        "http://backendsuperadmindashboard.onrender.com/api/auth/register",
+        "https://backendsuperadmindashboard-0a1b.onrender.com/api/auth/register",
         {
           method: "POST",
           headers: {

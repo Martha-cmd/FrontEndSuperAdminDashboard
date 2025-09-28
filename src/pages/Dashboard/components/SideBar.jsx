@@ -140,6 +140,7 @@ const SideBar = () => {
               return (
                 <li key={item.path}>
                   <Link
+                    to={item.path}
                     onClick={closeMobileMenu}
                     className={`w-full font-light flex gap-4 items-center text-[15px] px-4 py-2 rounded-full transition-all duration-200 ${
                       active
@@ -165,7 +166,7 @@ const SideBar = () => {
               return (
                 <li key={item.path}>
                   <Link
-                    to={item.path}
+                    // to={item.path}
                     onClick={closeMobileMenu}
                     className={`w-full font-light flex gap-4 items-center text-[15px] px-4 py-3 rounded-full transition-all duration-200 ${
                       active

@@ -24,11 +24,14 @@ const UserTable = ({ search }) => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const res = await fetch("http://localhost:5001/api/customers", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
+        const res = await fetch(
+          "https://backendsuperadmindashboard-0a1b.onrender.com/api/customers",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
 
         const data = await res.json();
 
@@ -54,7 +57,7 @@ const UserTable = ({ search }) => {
 
     try {
       const res = await fetch(
-        `http://backendsuperadmindashboard.onrender.com/api/customers/${id}`,
+        `https://backendsuperadmindashboard-0a1b.onrender.com/api/customers/${id}`,
         {
           method: "DELETE",
           headers: {
